@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HobbyFinder</title>
+</head>
+<body>
+<h1>Hobby Finder: Discover your Hobby</h1>
+<div>
+<!--Question1-->
+<p><strong>What Are You?</strong></p>
+<input type="radio" id="1a" name="1" value="a">
+<label for="1a">Active</label><br>
+<input type="radio" id="1b" name="1" value="b">
+<label for="1b">Creative</label><br>
+<input type="radio" id="1c"name="1" value="c">
+<label for="1c">Calm</label><br>
+<input type="radio" id="1d" name="1" value="d">
+<label for="1d">Chef</label><br>
+<input type="radio" id="1e" name="1" value="e">
+<label for="1e">Helper</label><br>
+<input type="radio" id="1f" name="1" value="f">
+<label for="1f">Builder</label><br>
+</div>
+<div>
+<!--Question2-->
+<p><strong>Are You a <em>Team Worker</em>?</strong></p>
+<input type="radio" id="2a" name="2" value="a">
+<label for="2a">Yes</label><br>
+<input type="radio" id="2b" name="2" value="b">
+<label for="2b">Not Really</label><br>
+<input type="radio" id="2c"name="2" value="c">
+<label for="2c">No</label><br>
+<input type="radio" id="2d" name="2" value="d">
+<label for="2d">Kind Of</label><br>
+<input type="radio" id="2e" name="2" value="e">
+<label for="2e">Of Course</label><br>
+<input type="radio" id="2f" name="2" value="f">
+<label for="2f">When Needed</label><br>
+</div>
+<div>
+<!--Question3-->
+<p><strong>How Would You Want To <em>Impact</em> The World?</strong></p>
+<input type="radio" id="3a" name="3" value="a">
+<label for="3a">By influencing others to be healthier<label><br>
+<input type="radio" id="3b" name="3" value="b">
+<label for="3b">Creating Entertainment</label><br>
+<input type="radio" id="3c" name="3" value="c">
+<label for="3c"><em>Discovering</em> new things and sharing them with others</label><br>
+<input type="radio" id="3d"name="3" value="d">
+<label for="3d">By making people happy</label><br>
+<input type="radio" id="3e" name="3" value="e">
+<label for="3e">By serving others</label><br>
+<input type="radio" id="3f" name="3" value="f">
+<label for="3f">By making efficiant ways to do things</label><br>
+</div>
+<div>
+<!--Question4-->
+<p><strong>How Do You Want To Improve Yourself?</strong></p>
+<input type="radio" id="4a" name="4" value="a">
+<label for="4a">Get in shape<label><br>
+<input type="radio" id="4b" name="4" value="b">
+<label for="4b">Become more creative</label><br>
+<input type="radio" id="4c" name="4" value="c">
+<label for="4c">Learn something new</label><br>
+<input type="radio" id="4d"name="4" value="d">
+<label for="4d">Trying something again until you get it right</label><br>
+<input type="radio" id="4e" name="4" value="e">
+<label for="4e">Thinking more about others rather than yourself</label><br>
+<input type="radio" id="4f" name="4" value="f">
+<label for="4f">Make something new</label><br>
+</div>
+<div>
+<!--Question5-->
+<p><strong>How Do You <em>Include</em> Others In Your Life?</strong></p>
+<input type="radio" id="5a" name="5" value="a">
+<label for="5a">By sharing victories with them<label><br>
+<input type="radio" id="5b" name="5" value="b">
+<label for="5b"></label><br>
+<input type="radio" id="5c" name="5" value="c">
+<label for="5c"></label><br>
+<input type="radio" id="5d"name="5" value="d">
+<label for="5d"></label><br>
+<input type="radio" id="5e" name="5" value="e">
+<label for="5e"></label><br>
+<input type="radio" id="5f" name="5" value="f">
+<label for="5f"></label><br>
+</div>
+<div>
+<!--Question6-->
+<p><strong>What Is Your Dream Job?</strong></p>
+<input type="radio" id="6a" name="6" value="a">
+<label for="6a">Professional athlete<label><br>
+<input type="radio" id="6b" name="6" value="b">
+<label for="6b"></label><br>
+<input type="radio" id="6c" name="6" value="c">
+<label for="6c"></label><br>
+<input type="radio" id="6d"name="6" value="d">
+<label for="6d"></label><br>
+<input type="radio" id="6e" name="6" value="e">
+<label for="6e"></label><br>
+<input type="radio" id="6f" name="6" value="f">
+<label for="6f">Engineer</label><br>
+</div>
+<div>
+<!--Question7-->
+<p><strong>Which fictional character most represents you?</strong></p>
+<input type="radio" id="7a" name="7" value="a">
+<label for="7a">Sportacus from "Lazy Town"<label><br>
+<input type="radio" id="7b" name="7" value="b">
+<label for="7b">Princess Poppy from "Trolls"</label><br>
+<input type="radio" id="7c" name="7" value="c">
+<label for="7c">Dora from "Dora the Explorer"</label><br>
+<input type="radio" id="7d"name="7" value="d">
+<label for="7d">Remy from "Ratatouille"</label><br>
+<input type="radio" id="7e" name="7" value="e">
+<label for="7e">Luke from "Star Wars"</label><br>
+<input type="radio" id="7f" name="7" value="f">
+<label for="7f">Bob from "Bob the Builder"</label><br>
+</div>
+
+<button type="button" onclick="calculate()">Get Results!</button>
+
+<script>
+function calculate() {
+    var A = 0, B = 0, C = 0, D = 0, E = 0, F = 0;
+
+//Question1 Calculation
+
+    var ele = document.getElementsByName('1');
+
+    for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
+            if (ele[i].value == "a") {
+                A++;
+            }
+            if (ele[i].value == "b") {
+                B++;
+            }
+            if (ele[i].value == "c") {
+                C++;
+            }
+            if (ele[i].value == "d") {
+                D++;
+            }
+            if (ele[i].value == "e") {
+                E++;
+            }
+            if (ele[i].value == "f") {
+                F++;
+            }
+        }
+
+
+    }
+
+//Question2 Calculation
+
+    var ele = document.getElementsByName('2');
+
+for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+        if (ele[i].value == "a") {
+            A++;
+        }
+        if (ele[i].value == "b") {
+            B++;
+        }
+        if (ele[i].value == "c") {
+            C++;
+        }
+        if (ele[i].value == "d") {
+            D++;
+        }
+        if (ele[i].value == "e") {
+            E++;
+        }
+        if (ele[i].value == "f") {
+            F++;
+        }
+    }
+
+
+}
+
+//Question3 Calculation
+
+var ele = document.getElementsByName('3');
+
+for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+        if (ele[i].value == "a") {
+            A++;
+        }
+        if (ele[i].value == "b") {
+            B++;
+        }
+        if (ele[i].value == "c") {
+            C++;
+        }
+        if (ele[i].value == "d") {
+            D++;
+        }
+        if (ele[i].value == "e") {
+            E++;
+        }
+        if (ele[i].value == "f") {
+            F++;
+        }
+    }
+}
+
+//Question4 Calculation
+
+var ele = document.getElementsByName('4');
+
+for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+        if (ele[i].value == "a") {
+            A++;
+        }
+        if (ele[i].value == "b") {
+            B++;
+        }
+        if (ele[i].value == "c") {
+            C++;
+        }
+        if (ele[i].value == "d") {
+            D++;
+        }
+        if (ele[i].value == "e") {
+            E++;
+        }
+        if (ele[i].value == "f") {
+            F++;
+        }
+    }
+}
+
+//Question5 Calculation
+
+var ele = document.getElementsByName('5');
+
+for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+        if (ele[i].value == "a") {
+            A++;
+        }
+        if (ele[i].value == "b") {
+            B++;
+        }
+        if (ele[i].value == "c") {
+            C++;
+        }
+        if (ele[i].value == "d") {
+            D++;
+        }
+        if (ele[i].value == "e") {
+            E++;
+        }
+        if (ele[i].value == "f") {
+            F++;
+        }
+    }
+}
+
+//Question6 Calculation
+
+var ele = document.getElementsByName('6');
+
+for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+        if (ele[i].value == "a") {
+            A++;
+        }
+        if (ele[i].value == "b") {
+            B++;
+        }
+        if (ele[i].value == "c") {
+            C++;
+        }
+        if (ele[i].value == "d") {
+            D++;
+        }
+        if (ele[i].value == "e") {
+            E++;
+        }
+        if (ele[i].value == "f") {
+            F++;
+        }
+    }
+}
+
+//Question7 Calculation
+
+var ele = document.getElementsByName('7');
+
+for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+        if (ele[i].value == "a") {
+            A++;
+        }
+        if (ele[i].value == "b") {
+            B++;
+        }
+        if (ele[i].value == "c") {
+            C++;
+        }
+        if (ele[i].value == "d") {
+            D++;
+        }
+        if (ele[i].value == "e") {
+            E++;
+        }
+        if (ele[i].value == "f") {
+            F++;
+        }
+    }
+}
+
+var highest;
+    if (A > B) {
+        if (A > C) {
+            if (A > D) {
+                if (A > E) {
+                    if (A > F) { 
+                        highest = "A";
+                    }
+                    else {
+                        highest = "F";
+                    }
+                }
+                else if (E > F) {
+                    highest = "E";
+                }
+                else {
+                    highest = "F";
+                }
+            }
+            else if (D > E) {
+                if (D > F) {
+                    highest = "D";
+                }
+                else {
+                    highest = "F";
+                }
+            }
+            else {
+                if (E > F) {
+                    highest = "E";
+                }
+                else {
+                    highest = "F";
+                }
+            }
+        }
+        else if (C > D) {
+            if (C > E) {
+                if (C > F) {
+                    highest = "C";
+                }
+                else {
+                    highest = "F";
+                }
+            }
+            else {
+                if (E > F) {
+                    highest = "E";
+                }
+                else {
+                    highest = "F";
+                }
+            }    
+        } 
+        else {
+            if (D > E) {
+                if (D > F) {
+                    highest = "D";
+                }
+                else {
+                    highest = "F";
+                }
+            }
+            else if (E > F) {
+                highest = "E";
+            }
+            else {
+                highest = "F";
+            }
+        }
+    }
+    else if (B > C) {
+        if (B > D) {
+            if (B > E) {
+                if (B > F) {
+                    highest = "B";
+                }
+                else {
+                    highest = "F";
+                }
+            }
+            else if (E > F) {
+                highest = "E";
+            }
+            else {
+                highest = "F";
+            }
+        
+        }
+    }
+    else if (C > D) {
+        if (C > E) {
+            if (C > F) {
+                highest = "C";
+            }
+            else {
+                highest = "F";
+            }
+        }
+        else if (E > F) {
+            highest = "E";
+        }
+        else {
+            highest = "F";
+        }
+    }
+    else if (D > E) {
+        if (D > F) {
+            highest = "D";
+        }
+        else {
+            highest = "F";
+        }
+    }
+    else if (E > F) {
+        highest = "E";
+    }
+    else {
+        highest = "F";
+    }
+
+
+    if (highest == "A") {
+
+        alert("You chose the first option the most, so we think you will enjoy sports.");
+    }
+    else if (highest == "B") {
+
+        alert("You chose the second option the most, so we think you will enjoy art, music, or creating content.");
+
+    }
+    else if (highest == "C") {
+
+        alert("You chose the third option the most, so we think you will enjoy reading/writing.");
+    }
+    else if (highest == "D") {
+
+        alert("You chose the fourth option the most, so we think you will enjoy cooking.");
+    }
+    else if (highest == "E") {
+
+        alert("You chose the fifth option the most, so we think you will enjoy volunteering.");
+    }
+    else {
+        alert("You chose the sixth option the most, so we think you will enjoy technology/building.");
+    }
+
+}
+</script>
+</body>
+</html>
