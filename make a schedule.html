@@ -12,20 +12,7 @@
           h2 {
               font-size: 36px;
           }
-      </style>
-        <title>HobbyFinder</title>
-
-    </head>
-    <body>
-      <div class="center">
-<h1>Hobby Finder: Make a Schedule</h1>
-<h2>How to do it:</h2>
-</div>
-<p> Type in already scheduled events and their times in the boxes (i.e.School 8:30-3:15 Rugby practice 5:00-6:00).Then, type in non-scheduled events in the boxes below the calender.If you want/need to do something more than once a month,type it in twice or
-  more. It will make a calender for you.Please print before you leave this page.</p>
-<head>
-<style>
-table {
+  table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -40,9 +27,19 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-</style>
-</head>
-<body>
+
+      </style>
+        <title>HobbyFinder</title>
+
+    </head>
+    <body>
+      <div class="center">
+<h1>Hobby Finder: Make a Schedule</h1>
+<h2>How to do it:</h2>
+</div>
+<p> Type in already scheduled events and their times in the boxes (i.e.School 8:30-3:15 Rugby practice 5:00-6:00).Then, type in non-scheduled events in the boxes below the calender.If you want/need to do something more than once a month,type it in twice or
+  more. It will make a calender for you.Please print before you leave this page.</p>
+
 
 
 
@@ -109,7 +106,8 @@ tr:nth-child(even) {
     <td>31<input type="text"id="30"value=""></td>
   </tr>
 </table>
-<button onclick="window.print()">Print this calendar</button><button type="button"><a href="quiz.html">Find your hobby</a></button><button type="button"><a href="index.html">Home</a></button>
+<button onclick="window.print()">Print this calendar</button><button onclick="schedule()">Make the Schedule</button><button type="button"><a href="quiz.html">Find your hobby</a></button><button type="button"><a href="index.html">Home</a></button>
+<img src="2023ip pictures\IMG_9564.jpg">
 <ul>
  <li><input type="text"id="a"value=""></li> 
  <li><input type="text"id="b"value=""></li>
@@ -138,7 +136,6 @@ tr:nth-child(even) {
  <li><input type="text"id="y"value=""></li>
  <li><input type="text"id="z"value=""></li>
 </ul>
-<button onclick="schedule()">Submit</button>
 </body>
 <script>
   function schedule() {
@@ -168,7 +165,7 @@ tr:nth-child(even) {
       document.getElementById("13").value += hob8;
        //hobby 9 schedule
    let hob9= document.getElementById("i").value;
-      document.getElementById("24").value += hob9;
+      document.getElementById("26").value += hob9;
        //hobby 10 schedule
    let hob10= document.getElementById("j").value;
       document.getElementById("14").value += hob10;
@@ -222,5 +219,5 @@ tr:nth-child(even) {
       document.getElementById("8").value += hob26;
   }
 </script>
-    </body>
+
 </html>
